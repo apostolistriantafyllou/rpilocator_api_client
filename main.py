@@ -9,7 +9,7 @@ def onclick(url):
 	webbrowser.open(url, new=0, autoraise=True)
 
 while True:
-	r = requests.get('http://' + apiurl + '/pi4-8gb-stockcheck/[4,8]')
+	r = requests.get('http://' + apiurl + '/pi4-stockcheck/[4,8]')
 	if r.text != 'null':
 		pilist = literal_eval(r.text)
 		for res in pilist:
